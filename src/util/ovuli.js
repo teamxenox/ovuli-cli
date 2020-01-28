@@ -5,9 +5,8 @@ const moment = require('moment');
  * This is a function to caluclate female different ovuli days.
  * @param {string} lastPeriodDate -  Day of female's last period.
  * @param {string} averageCycleDay - Average cycle days of females.
- * 
+ *
  */
-
 const calculateOvuli = (lastPeriodDate, averageCycleDay) => {
    return new Promise( (resolve, reject) =>{
         let result = {

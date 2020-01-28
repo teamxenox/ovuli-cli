@@ -2,8 +2,7 @@
 'use strict'
 
 const program = require("commander");
-const ovuli = require('./util/ovuli');
-// console.log(ovuli.calculateOvuli('2020-01-01T11:12:25.338Z', 27))
+const ovuli = require("./util/ovuli");
 const prompt = require("../src/util/prompt");
 program.version("0.0.1");
 
@@ -12,8 +11,16 @@ program
   .alias("s")
   .action(() => {
     prompt.lastDate().then(lastDate => {
-      prompt.averageCycle().then(averageCycle => {
-        console.log(averageCycle, lastDate);
+      prompt.askAverageCycle().then(result => {
+        if (result.askAverageCycle) {
+          prompt.averageCycle().then(averageCycle => {
+            console.log(averageCycle, lastDate);
+          });
+        } else {
+          prompt.calculateAverageCycle().then(calculateAverageCycle => {
+            console.log(calculateAverageCycle, lastDate);
+          });
+        }
       });
     });
   });

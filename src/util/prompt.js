@@ -28,6 +28,22 @@ const lastDate = () => {
  * @returns {Promise} The promise with the date
  */
 
+const askAverageCycle = () => {
+  return inquirer.prompt([
+    {
+      type: "confirm",
+      name: "askAverageCycle",
+      message: "🧐 Do you know your average cycle (in Days)?:"
+    }
+  ]);
+};
+
+/**
+ * This is a function to get first day of the last periods
+ * @param null - null
+ * @returns {Promise} The promise with the date
+ */
+
 const averageCycle = () => {
   return inquirer.prompt([
     {
@@ -44,4 +60,32 @@ const averageCycle = () => {
   ]);
 };
 
-module.exports = { lastDate, averageCycle };
+/**
+ * This is a function to get first day of the last periods
+ * @param null - null
+ * @returns {Promise} The promise with the date
+ */
+
+const calculateAverageCycle = () => {
+  return inquirer.prompt([
+    {
+      type: "datetime",
+      name: "secondLastDate",
+      message: "😖 Enter the first day of your Second last periods (DD/MM/YY):",
+      format: ["d", "/", "m", "/", "yy"]
+    },
+    {
+      type: "datetime",
+      name: "thirdLastDate",
+      message: "☹️ Enter the first day of your Third Last periods (DD/MM/YY):",
+      format: ["d", "/", "m", "/", "yy"]
+    }
+  ]);
+};
+
+module.exports = {
+  lastDate,
+  askAverageCycle,
+  calculateAverageCycle,
+  averageCycle
+};

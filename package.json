@@ -8,8 +8,8 @@
     "chalk": "^3.0.0",
     "commander": "^4.1.0",
     "inquirer": "^7.0.4",
-    "moment": "^2.24.0",
-    "inquirer-datepicker-prompt": "^0.4.2"
+    "inquirer-datepicker-prompt": "^0.4.2",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
