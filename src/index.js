@@ -1,7 +1,8 @@
 #! /usr/bin/env node
+'use strict'
 
 const program = require("commander");
-// const ovuli = require('./util/ovuli');
+const ovuli = require('./util/ovuli');
 // console.log(ovuli.calculateOvuli('2020-01-01T11:12:25.338Z', 27))
 const prompt = require("../src/util/prompt");
 program.version("0.0.1");
@@ -18,3 +19,4 @@ program
   });
 
 program.parse(process.argv);
+// ovuli.calculateAverageCycle(['2020-01-25T11:12:25.338Z', '2020-01-13T11:12:25.338Z', '2020-01-01T11:12:25.338Z']);
