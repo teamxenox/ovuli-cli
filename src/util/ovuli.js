@@ -87,7 +87,21 @@ const calculateAverageCycle = cycles => {
   return averageCycleDay;
 };
 
+const compareDate = lastDate => {
+  const dateObj = new Date(
+    new Date().getFullYear(),
+    lastDate.month - 1,
+    lastDate.day
+  );
+  const estimateDate = moment(dateObj);
+
+  const today = moment();
+
+  return estimateDate < today ? true : false;
+};
+
 module.exports = {
   calculateOvuli,
-  calculateAverageCycle
+  calculateAverageCycle,
+  compareDate
 };
