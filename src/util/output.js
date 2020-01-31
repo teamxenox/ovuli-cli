@@ -6,7 +6,7 @@ const moment = require('moment');
 const options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'round'
+  borderStyle: 'double'
 };
 
 const getFormattedMonth = month => {
@@ -49,26 +49,33 @@ const prettyPrint = result => {
   // Actual strings we're going to output
   const newline = '\n';
   const heading = `${data.ovuliHeading}`;
-  const fertile = `${data.labelFertile} ${data.fertileDetail} ${data.fertileMonth}`;
+  const fertile = `${data.labelFertile} ${data.fertileDetail} ${data.fertileMonth}     `;
   const approxOvulation = `${data.labelApproxOvulation} ${data.approxOvulationDay} ${data.approxOvulationMonth}`;
   const nextPeriod = `${data.labelNextPeriod} ${data.nextPeriodDay} ${data.nextPeriodMonth}`;
   const pregnancyTestDay = `${data.labelPregnancyTestDay} ${data.pregnancyTestDay} ${data.pregnancyTestMonth}`;
 
   // Put all our output together into a single variable so we can use boxen effectively
   const output =
-    heading + // data.name + data.handle
-    newline +
-    newline +
     fertile +
     newline +
     approxOvulation +
     newline +
     nextPeriod +
     newline +
-    pregnancyTestDay +
-    newline;
+    pregnancyTestDay;
+
+  console.log(newline);
+  console.log(
+    boxen(
+      chalk.magentaBright.bold('    Ovuli:') +
+        chalk.white.italic(' Ovulation Cycle Calculator 💁‍♀️   '),
+      { margin: { left: 3 }, borderStyle: 'double' }
+    )
+  );
 
   console.log(chalk.yellow(boxen(output, options)));
+  console.log(chalk.cyanBright('           Made with ❤️  from Team XenoX 🔥'));
+  console.log(chalk.yellow('               Contribute on Github'));
 };
 
 module.exports = { prettyPrint };
