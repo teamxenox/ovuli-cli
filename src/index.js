@@ -14,7 +14,9 @@ const fs = require('fs');
 
 program.version('0.0.1');
 
-if (!process.argv.slice(2).length) {
+const noArguments = !process.argv.slice(2).length;
+
+if (noArguments) {
   prompt.lastDate().then(lastDate => {
     prompt.askAverageCycle().then(result => {
       if (result.askAverageCycle) {
@@ -137,4 +139,3 @@ program
   });
 
 program.parse(process.argv);
-// ovuli.calculateAverageCycle(['2020-01-25T11:12:25.338Z', '2020-01-13T11:12:25.338Z', '2020-01-01T11:12:25.338Z']);
