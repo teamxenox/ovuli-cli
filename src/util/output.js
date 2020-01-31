@@ -13,31 +13,31 @@ const getFormattedMonth = month => {
   const monthIndex = month - 1;
   return moment()
     .month(monthIndex)
-    .format('MMMM');
+    .format('MMM');
 };
 
 const prettyPrint = result => {
   // Text + chalk definitions
   const data = {
-    ovuliHeading: chalk.white.bold('          Ovuli Calculator'),
-    labelFertile: chalk.white.bold('       Fertile Window:'),
-    labelApproxOvulation: chalk.white.bold('Approximate Ovulation:'),
-    labelNextPeriod: chalk.white.bold('          Next Period:'),
-    labelPregnancyTestDay: chalk.white.bold('   Pregnancy Test Day:'),
-    fertileMonth: chalk.white(
+    ovuliHeading: chalk.cyan.bold('              Ovuli'),
+    labelFertile: chalk.green.bold('       Fertile Window:'),
+    labelApproxOvulation: chalk.blue.bold('Approximate Ovulation:'),
+    labelNextPeriod: chalk.yellow.bold('          Next Period:'),
+    labelPregnancyTestDay: chalk.magenta.bold('   Pregnancy Test Day:'),
+    fertileMonth: chalk.white.italic(
       `${getFormattedMonth(result.fertileWindow.startMonth)}`
     ),
-    approxOvulationMonth: chalk.white(
+    approxOvulationMonth: chalk.white.italic(
       `${getFormattedMonth(result.approximateOvulationDate.month)}`
     ),
-    nextPeriodMonth: chalk.white(
+    nextPeriodMonth: chalk.white.italic(
       `${getFormattedMonth(result.nextPeriodDate.month)}`
     ),
-    pregnancyTestMonth: chalk.white(
+    pregnancyTestMonth: chalk.white.italic(
       `${getFormattedMonth(result.nextPregnancTestDate.month)}`
     ),
     fertileDetail: chalk.white.bold(
-      `${result.fertileWindow.start} - ${result.fertileWindow.end}`
+      `${result.fertileWindow.start}-${result.fertileWindow.end}`
     ),
     approxOvulationDay: chalk.white.bold(
       `${result.approximateOvulationDate.day}`
@@ -49,10 +49,10 @@ const prettyPrint = result => {
   // Actual strings we're going to output
   const newline = '\n';
   const heading = `${data.ovuliHeading}`;
-  const fertile = `${data.labelFertile} ${data.fertileMonth} ${data.fertileDetail}`;
-  const approxOvulation = `${data.labelApproxOvulation} ${data.approxOvulationMonth} ${data.approxOvulationDay}`;
-  const nextPeriod = `${data.labelNextPeriod} ${data.nextPeriodMonth} ${data.nextPeriodDay}`;
-  const pregnancyTestDay = `${data.labelPregnancyTestDay} ${data.pregnancyTestMonth} ${data.pregnancyTestDay}`;
+  const fertile = `${data.labelFertile} ${data.fertileDetail} ${data.fertileMonth}`;
+  const approxOvulation = `${data.labelApproxOvulation} ${data.approxOvulationDay} ${data.approxOvulationMonth}`;
+  const nextPeriod = `${data.labelNextPeriod} ${data.nextPeriodDay} ${data.nextPeriodMonth}`;
+  const pregnancyTestDay = `${data.labelPregnancyTestDay} ${data.pregnancyTestDay} ${data.pregnancyTestMonth}`;
 
   // Put all our output together into a single variable so we can use boxen effectively
   const output =
@@ -68,7 +68,7 @@ const prettyPrint = result => {
     pregnancyTestDay +
     newline;
 
-  console.log(chalk.green(boxen(output, options)));
+  console.log(chalk.yellow(boxen(output, options)));
 };
 
 module.exports = { prettyPrint };
