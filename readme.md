@@ -51,4 +51,4 @@ Feel free to contribute to this project and treat it like your own. 😊
 
 ## License
 
-[MIT License](https://github.com/sarthology/ovuli/blob/master/LICENSE)
+[MIT License](https://github.com/sarthology/ovuli/blob/master/license)
