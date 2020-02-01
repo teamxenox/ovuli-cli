@@ -18,19 +18,19 @@ NOTE: This tool cannot and should not be used to prevent pregnancy. Results are 
 npm i -g ovuli
 ```
 
-## Usage
+## Features
 
-To calculate
+##### Calculate on the go 
 ```sh
 ovuli
 ```
 
-To save data
+#### Calculate and save for future
 ```sh
 ovuli save
 ```
 
-To check based on earlier saved data
+#### Calculate using saved data
 ```sh
 ovuli check
 ```
@@ -48,14 +48,3 @@ Feel free to contribute to this project and treat it like your own. 😊
 ## License
 
 [MIT License](https://github.com/sarthology/ovuli/blob/master/LICENSE)
-
-## Authors
-
-[Sarthak Sharma](https://twitter.com/sarthology)
-
-[Shubham](https://github.com/shubhamArora15)
-
-[Pawan](https://github.com/pavanjadhaw)
-
-[Hardik](https://github.com/Hardik500)
-
