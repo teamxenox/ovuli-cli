@@ -12,37 +12,30 @@ NOTE: This tool cannot and should not be used to prevent pregnancy. Results are 
 
 &nbsp;
 
-#### installation
+## Installation
 
 ```sh
 npm i -g ovuli
 ```
 
-&nbsp;
-
-#### usage
+## Usage
 
 To calculate
 ```sh
 ovuli
 ```
 
-&nbsp;
-
 To save data
 ```sh
 ovuli save
 ```
-
-&nbsp;
 
 To check based on earlier saved data
 ```sh
 ovuli check
 ```
 
-&nbsp;
 
-#### license
+## License
 
 MIT © [Sarthak Sharma](https://github.com/sarthology)
