@@ -6,13 +6,8 @@ A simple commandline utility that allows you to see when you may be ovulating to
 
 NOTE: This tool cannot and should not be used to prevent pregnancy. Results are estimates and actual ovulation will vary for each woman.
 
-&nbsp;
-
-#### demo
-
 <p align="center">
-  <!-- <img src="./demo.svg"> -->
-  <p>Demo Gif Here</p>
+ <img src="https://user-images.githubusercontent.com/3650216/73588516-1bf37000-44f0-11ea-8d50-bcc16a23088d.gif">
 </p>
 
 &nbsp;
