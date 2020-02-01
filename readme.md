@@ -5,10 +5,6 @@
   <br>
 </p>
 
-&nbsp;
-
-#### ovuli
-
 A simple commandline utility that allows you to see when you may be ovulating to help find your most fertile days. Menstrual periods are different from woman to woman and month to month.
 
 NOTE: This tool cannot and should not be used to prevent pregnancy. Results are estimates and actual ovulation will vary for each woman.
