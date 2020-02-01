@@ -75,7 +75,7 @@ footer span img {
 footer {
   display: -webkit-flex;
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
   font-family: sans-serif;
   flex-direction: column;
   text-align: center;
@@ -183,7 +183,7 @@ button:focus {
 }
 .code {
   text-align: center;
-  margin: 50px;
+  margin-top: 50px;
   font-size: 20px;
 }
 code {
