@@ -34,8 +34,29 @@ To check based on earlier saved data
 ```sh
 ovuli check
 ```
+## Prerequisites
 
+Before running this locally you must have these installed
+
+- [Node](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
+
+## Contributing
+
+Feel free to contribute to this project and treat it like your own. 😊
 
 ## License
+## License
 
-MIT © [Sarthak Sharma](https://github.com/sarthology)
+[MIT License](https://github.com/sarthology/ovuli/blob/master/LICENSE)
+
+## Authors
+
+[Sarthak Sharma](https://twitter.com/sarthology)
+
+[Shubham](https://github.com/shubhamArora15)
+
+[Pawan](https://github.com/pavanjadhaw)
+
+[Hardik](https://github.com/Hardik500)
+
