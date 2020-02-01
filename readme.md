@@ -1,6 +1,5 @@
 <p align="center">
-  <!-- <img src="./hero.png" height="200px"/> -->
-  <p>Hero Image Here</p>
+ <img src="https://user-images.githubusercontent.com/3650216/73588052-18f58100-44ea-11ea-8f30-e4958e5a0b28.png"/>
   <br><br>
   <b>Ovulation Calculator</b>
   <br>
