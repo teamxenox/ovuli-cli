@@ -6,48 +6,49 @@ A simple commandline utility that allows you to see when you may be ovulating to
 
 NOTE: This tool cannot and should not be used to prevent pregnancy. Results are estimates and actual ovulation will vary for each woman.
 
-&nbsp;
-
-#### demo
-
 <p align="center">
-  <!-- <img src="./demo.svg"> -->
-  <p>Demo Gif Here</p>
+ <img src="https://user-images.githubusercontent.com/3650216/73588516-1bf37000-44f0-11ea-8d50-bcc16a23088d.gif">
 </p>
 
 &nbsp;
 
-#### installation
+## Installation
 
 ```sh
 npm i -g ovuli
 ```
 
-&nbsp;
+## Features
 
-#### usage
-
-To calculate
+##### Calculate on the go 
 ```sh
 ovuli
 ```
 
-&nbsp;
-
-To save data
+#### Calculate and save for future
 ```sh
 ovuli save
 ```
 
-&nbsp;
-
-To check based on earlier saved data
+#### Calculate using saved data
 ```sh
 ovuli check
 ```
+## Prerequisites
 
-&nbsp;
+Before running this locally you must have these installed
 
-#### license
+- [Node](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-MIT © [Sarthak Sharma](https://github.com/sarthology)
+## Contributing
+
+1. 🍴 Fork this repo!
+2. **HACK AWAY!** 🔨🔨🔨
+3. 🔃 Create a new pull request.
+
+Feel free to contribute to this project and treat it like your own. 😊
+
+## License
+
+[MIT License](https://github.com/sarthology/ovuli/blob/master/license)
