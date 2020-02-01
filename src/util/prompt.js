@@ -77,7 +77,7 @@ const calculateAverageCycle = () => {
     {
       type: 'datetime',
       name: 'thirdLastDate',
-      message: '☹️ Enter the first day of your Third Last periods (DD/MM/YY):',
+      message: '☹️  Enter the first day of your Third Last periods (DD/MM/YY):',
       format: ['d', '/', 'm', '/', 'yy']
     }
   ]);
