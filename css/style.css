@@ -158,10 +158,12 @@ footer {
 .terminal {
   display: grid;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
+
 .terminal img {
-  width: 500px;
+  box-shadow: -15px 15px 20px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes floating {
@@ -189,7 +191,7 @@ button:focus {
 code {
   margin: 5px;
   border: 1px solid #a6a4a4;
-  padding: 8px;
+  padding: 8px 30px;
   border-radius: 5px;
   text-align: center;
   font-size: 20px;
