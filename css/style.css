@@ -156,7 +156,7 @@ footer {
   }
 }
 .terminal {
-  display: flex;
+  display: grid;
   justify-content: center;
   margin-top: 70px;
 }
