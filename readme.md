@@ -46,7 +46,6 @@ Before running this locally you must have these installed
 Feel free to contribute to this project and treat it like your own. 😊
 
 ## License
-## License
 
 [MIT License](https://github.com/sarthology/ovuli/blob/master/LICENSE)
 
