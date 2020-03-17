@@ -138,4 +138,21 @@ program
     });
   });
 
+program
+  .command('data')
+  .alias('d')
+  .action(() => {
+    fs.readFile('./data.json', 'utf8', (err, jsonData) => {
+      if (err) {
+        console.log('You have not previously stored any data 😭');
+        return;
+      } else {
+        let historyData = JSON.parse(jsonData).history;
+        for (var i = 0; i < historyData.length; i++) {
+          prettyPrint(historyData[i]);
+        }
+      }
+    });
+  });
+
 program.parse(process.argv);
