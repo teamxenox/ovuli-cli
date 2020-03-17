@@ -36,6 +36,12 @@ ovuli save
 ```sh
 ovuli check
 ```
+
+#### Show saved data
+```sh
+ovuli data
+```
+
 ## Prerequisites
 
 Before running this locally you must have these installed
