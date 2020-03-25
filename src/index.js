@@ -9,7 +9,7 @@ const {
 } = require('./util/ovuli');
 const prompt = require('../src/util/prompt');
 const helper = require('../src/util/helper');
-const { prettyPrint } = require('./util/output');
+const { boxData, outputHeader, outputFooter } = require('./util/output');
 const fs = require('fs');
 
 program.version('0.0.1');
@@ -22,7 +22,9 @@ if (noArguments) {
       if (result.askAverageCycle) {
         prompt.averageCycle().then(averageCycle => {
           const result = calculateOvuli(lastDate, averageCycle);
-          prettyPrint(result);
+          outputHeader();
+          boxData(result);
+          outputFooter();
         });
       } else {
         prompt.calculateAverageCycle().then(averageCycle => {
@@ -39,7 +41,9 @@ if (noArguments) {
           const result = calculateOvuli(lastDate, {
             averageCycle: calculatedAverageCycle
           });
-          prettyPrint(result);
+          outputHeader();
+          boxData(result);
+          outputFooter();
         });
       }
     });
@@ -56,7 +60,9 @@ program
           prompt.averageCycle().then(averageCycle => {
             const result = calculateOvuli(lastDate, averageCycle);
             helper.saveData(lastDate, result);
-            prettyPrint(result);
+            outputHeader();
+            boxData(result);
+            outputFooter();
           });
         } else {
           prompt.calculateAverageCycle().then(averageCycle => {
@@ -75,7 +81,9 @@ program
             });
 
             helper.saveData(lastDate, result);
-            prettyPrint(result);
+            outputHeader();
+            boxData(result);
+            outputFooter();
           });
         }
       });
@@ -107,7 +115,9 @@ program
 
                 helper.appendData(jsonData, lastDate, result);
 
-                prettyPrint(result);
+                outputHeader();
+                boxData(result);
+                outputFooter();
               });
             } else {
               prompt.calculateAverageCycle().then(averageCycle => {
@@ -127,13 +137,17 @@ program
 
                 helper.appendData(jsonData, lastDate, result);
 
-                prettyPrint(result);
+                outputHeader();
+                boxData(result);
+                outputFooter();
               });
             }
           });
         });
       } else {
-        prettyPrint(previousData);
+        outputHeader();
+        boxData(previousData);
+        outputFooter();
       }
     });
   });
@@ -147,10 +161,12 @@ program
         console.log('You have not previously stored any data 😭');
         return;
       } else {
+        outputHeader();
         let historyData = JSON.parse(jsonData).history;
         for (var i = 0; i < historyData.length; i++) {
-          prettyPrint(historyData[i]);
+          boxData(historyData[i]);
         }
+        outputFooter();
       }
     });
   });

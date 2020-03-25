@@ -16,7 +16,22 @@ const getFormattedMonth = month => {
     .format('MMM');
 };
 
-const prettyPrint = result => {
+//Output Header & Footer
+const outputHeader = () => {
+  console.log(
+    boxen(
+      chalk.magentaBright.bold('    Ovuli:') +
+        chalk.white.italic(' Ovulation Cycle Calculator 💁‍♀️   '),
+      { margin: { left: 3 }, borderStyle: 'double' }
+    )
+  );
+};
+const outputFooter = () => {
+  console.log(chalk.cyanBright('           Made with ❤️  from Team XenoX 🔥'));
+  console.log(chalk.yellow('               Contribute on Github'));
+};
+
+const boxData = result => {
   // Text + chalk definitions
   const data = {
     ovuliHeading: chalk.cyan.bold('              Ovuli'),
@@ -55,7 +70,7 @@ const prettyPrint = result => {
   const pregnancyTestDay = `${data.labelPregnancyTestDay} ${data.pregnancyTestDay} ${data.pregnancyTestMonth}`;
 
   // Put all our output together into a single variable so we can use boxen effectively
-  const output =
+  output =
     fertile +
     newline +
     approxOvulation +
@@ -63,19 +78,7 @@ const prettyPrint = result => {
     nextPeriod +
     newline +
     pregnancyTestDay;
-
-  console.log(newline);
-  console.log(
-    boxen(
-      chalk.magentaBright.bold('    Ovuli:') +
-        chalk.white.italic(' Ovulation Cycle Calculator 💁‍♀️   '),
-      { margin: { left: 3 }, borderStyle: 'double' }
-    )
-  );
-
   console.log(chalk.yellow(boxen(output, options)));
-  console.log(chalk.cyanBright('           Made with ❤️  from Team XenoX 🔥'));
-  console.log(chalk.yellow('               Contribute on Github'));
 };
 
-module.exports = { prettyPrint };
+module.exports = { boxData, outputHeader, outputFooter };
