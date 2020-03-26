@@ -2,6 +2,8 @@ const chalk = require('chalk');
 const boxen = require('boxen');
 const moment = require('moment');
 
+let output = '';
+
 // Define options for Boxen
 const options = {
   padding: 1,
@@ -25,10 +27,6 @@ const outputHeader = () => {
       { margin: { left: 3 }, borderStyle: 'double' }
     )
   );
-};
-const outputFooter = () => {
-  console.log(chalk.cyanBright('           Made with ❤️  from Team XenoX 🔥'));
-  console.log(chalk.yellow('               Contribute on Github'));
 };
 
 const boxData = result => {
@@ -70,15 +68,22 @@ const boxData = result => {
   const pregnancyTestDay = `${data.labelPregnancyTestDay} ${data.pregnancyTestDay} ${data.pregnancyTestMonth}`;
 
   // Put all our output together into a single variable so we can use boxen effectively
-  output =
+  output +=
     fertile +
     newline +
     approxOvulation +
     newline +
     nextPeriod +
     newline +
-    pregnancyTestDay;
+    pregnancyTestDay +
+    newline +
+    newline;
+};
+
+const outputFooter = () => {
   console.log(chalk.yellow(boxen(output, options)));
+  console.log(chalk.cyanBright('           Made with ❤️  from Team XenoX 🔥'));
+  console.log(chalk.yellow('               Contribute on Github'));
 };
 
 module.exports = { boxData, outputHeader, outputFooter };
