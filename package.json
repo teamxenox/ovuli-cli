@@ -15,7 +15,7 @@
     "commander": "^4.1.0",
     "inquirer": "^7.0.4",
     "inquirer-datepicker-prompt": "^0.4.2",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
